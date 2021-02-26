@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="/feedbackScoreCard.css">
+</head>
+
+<body>
+    <h1 class="top_heading">
+        Dear<span class="data"> Educator,</span>
+    </h1>
+    <h3>Here is the Feedback of your video</h3>
+
+    <section>
+        <div class="tbl-header" style="margin: 1% 2%;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Audio Quality</th>
+                        <td>
+                            <% for(var i=0; i< parseInt(fb['audQual']); i++) { %>
+                                <i class="fas fa-star"></i>
+                                <% } %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Video Quality</th>
+                        <td>
+                            <% for(var i=0; i< parseInt(fb['vidQual']); i++) { %>
+                                <i class="fas fa-star"></i>
+                                <% } %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Video Editing (Syncing of content with animated PPT)</th>
+                        <td>
+                            <% for(var i=0; i< parseInt(fb['vidEditing']); i++) { %>
+                                <i class="fas fa-star"></i>
+                                <% } %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Presentation of Educator</th>
+                        <td>
+                            <% for(var i=0; i< parseInt(fb['ppt']); i++) { %>
+                                <i class="fas fa-star"></i>
+                                <% } %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Overall Feedback and Final Decision</th>
+                        <td>
+                            <%=fb['remarks']%>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+    <form method="POST">
+        <input type="text" id="question" placeholder="Ask your question">
+        <button type="button" onclick="askQue()" class="cta">Send</button>
+    </form>
+    <p style="text-align: center; color: green;" id="feedbackresp"></p>
+    <div class="buttons">
+        <button class="cta" id="FSCReturnToPP">RETURN TO DASHBOARD</button>
+        <% if(fb['final'] == 'y') { %>
+            <button class="cta" id="uploadAnnexure">UPLOAD THE ANNEXURE-1</button>
+            <% } else { %>
+                <button class="cta" id="uploadTV">UPLOAD TEST VIDEO</button>
+                <% } %>
+    </div>
+
+    <script>
+        function askQue() {
+            $.ajax({
+                method: 'POST',
+                url: '/be-an-educator/sendFeedbackQuery',
+                data: {
+                    'query': $('#question').val()
+                },
+                success: (data) =>{
+                    if(data == 'success') {
+                        $('#question').val('')
+                        document.getElementById('feedbackresp').innerText = 'Your query has been submitted. Our team will reach you soon.'
+                    } else {
+                        document.getElementById('feedbackresp').innerText = 'Something went wrong. Please try again later.'
+                    }
+                }
+            })
+        }
+        document.getElementById('FSCReturnToPP').onclick = function() {
+            location.href = '/be-an-educator/dashboard/home';
+        }
+        var fbd = '<%=fb["final"]%>'
+        if(fbd == 'y') {
+            document.getElementById('uploadAnnexure').onclick = function() {
+                location.href = '/be-an-educator/dashboard/createNewCourse';
+            }
+        } else {
+            document.getElementById('uploadTV').onclick = function() {
+                location.href = '/be-an-educator/dashboard/testVideoAndFeedback';
+            }
+        }
+    </script> 
+
+</body>
+
+</html>

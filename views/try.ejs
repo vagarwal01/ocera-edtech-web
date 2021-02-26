@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.min.js"></script>
+
+    </head>
+    <body>
+        <!-- <form action="/be-an-educator/try" method="POST" id="form" > -->
+        <form method="POST" id="form" >
+            <input type="text" name="title" id="title">
+            <textarea name="text" id="textdt"></textarea>
+            <button type="submit" onclick="save()">save</button>
+        </form>
+
+        <script src="/ckeditor/ckeditor.js"></script>
+        
+        <script>
+            CKEDITOR.replace('textdt')
+            var form = $('#form')[0]
+            function save() {
+                $.ajax({
+                    method: 'POST',
+                    url: 'http://localhost:8000/be-an-educator/try',
+                    enctype: 'multipart/form-data',
+                    data: {
+                        'tite': $('#title').val(),
+                        'data': document.getElementById('textdt').value
+                    },
+                //     processData: false,
+                // contentType: false,
+                // cache: false,
+                    success: () => {
+                        alert('suc')
+                    },
+                    eroor: () => {
+                        alert('err')
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>

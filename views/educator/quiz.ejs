@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUCATOR QUIZ</title>
+    <link rel="stylesheet" href="/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info_box">
+            <div class="info-title"><span class="span_title">Dear Educator, how to upload questions</span></div>
+            <div class="info-list">
+                <div class="info">1. The title is put random for you to fill.</div>
+                <div class="info">2. Just fill the questions and all its options.</div>
+                <div class="info">3. Select the right answer.</div>
+                <div class="info">4. Choose the module from which the question is covered.</div>
+                <div class="info">5. Click on next to put next questions else click on submit to submit the questions.</div>
+            </div>
+            <div class="buttons">
+                <button class="cta quit">Close</button>
+                <button class="cta start">Create Quiz</button>
+            </div>
+        </div>
+
+        <div class="quiz_box">
+            <header>
+                <div class="form__group field header_div">
+                    <input type="input" class="form__field que_text" placeholder="Title" name="title" id='title' required/>
+                    <label for="title" class="form__label">Title</label>
+                </div>
+            </header>
+            <section>
+                <div class="form__group field">
+                    <input type="input" class="form__field que_text" placeholder="Question" name="question" id='question' required/>
+                    <label for="question" class="form__label">Question</label>
+                </div>
+
+                <div class="option_list">
+                    <div class="form__group field header_div">
+                        <i class="far fa-2x fa-check-circle ans_1"></i>
+                        <input type="input" class="form__field_option" placeholder="Option 1" name="option1" id='option1' required/>
+                        <label for="option1" class="form__label">Option 1</label>
+                    </div>
+                    <div class="form__group field header_div">
+                        <i class="far fa-2x fa-check-circle ans_2"></i>
+                        <input type="input" class="form__field_option" placeholder="Option 2" name="option2" id='option2' required/>
+                        <label for="option2" class="form__label">Option 2</label>
+                    </div>
+                    <div class="form__group field header_div">
+                        <i class="far fa-2x fa-check-circle ans_3"></i>
+                        <input type="input" class="form__field_option" placeholder="Option 3" name="option3" id='option3' required/>
+                        <label for="option3" class="form__label">Option 3</label>
+                    </div>
+                    <div class="form__group field header_div">
+                        <i class="far fa-2x fa-check-circle ans_4"></i>
+                        <input type="input" class="form__field_option" placeholder="Option 4" name="option4" id='option4' required/>
+                        <label for="option4" class="form__label">Option 4</label>
+                    </div>
+
+                    <div class="select">
+                        <select id="standard-select">
+                            <option value="free">Free</option> 
+                            <option value="usd" selected>USD $</option>
+                            <option value="inr">INR ₹</option>
+                       </select>
+                    </div>
+            </section>
+            <footer>
+                <div class="buttons">
+                    <button class="cta submit_btn">Submit Quiz</button>
+                    <button class="cta next_btn">Next Que</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".start").addEventListener("click",function(){
+            document.querySelector(".quiz_box").style.display = "block";
+            document.querySelector(".info_box").style.display = "none"
+        });
+
+        document.querySelector(".ans_1").addEventListener("click",function(){
+            document.querySelector(".ans_1").style.color="green";
+            document.querySelector(".ans_2").style.color="grey";
+            document.querySelector(".ans_3").style.color="grey";
+            document.querySelector(".ans_4").style.color="grey";
+        });
+        document.querySelector(".ans_2").addEventListener("click",function(){
+            document.querySelector(".ans_1").style.color="grey";
+            document.querySelector(".ans_2").style.color="green";
+            document.querySelector(".ans_3").style.color="grey";
+            document.querySelector(".ans_4").style.color="grey";
+        });
+        document.querySelector(".ans_3").addEventListener("click",function(){
+            document.querySelector(".ans_1").style.color="grey";
+            document.querySelector(".ans_2").style.color="grey";
+            document.querySelector(".ans_3").style.color="green";
+            document.querySelector(".ans_4").style.color="grey";
+        });
+        document.querySelector(".ans_4").addEventListener("click",function(){
+            document.querySelector(".ans_1").style.color="grey";
+            document.querySelector(".ans_2").style.color="grey";
+            document.querySelector(".ans_3").style.color="grey";
+            document.querySelector(".ans_4").style.color="green";
+        });
+    </script>
+
+
+
+</body>
+</html>
