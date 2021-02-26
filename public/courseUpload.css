@@ -1,0 +1,621 @@
+.plus {
+    width: max-content;
+    /* display: none; */
+    cursor: pointer;
+    text-align: center;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ecf0f3;
+    border: 1px solid black;
+    padding: 10px 25px;
+    margin-right: 3%;
+    border-radius: 2px;
+    transition: 0.5s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.plus:hover {
+    box-shadow: 0 0 0 #fff;
+    /* border: 1px solid grey; */
+    border: 2px solid black;
+}
+
+input[type=text],
+input[type=number] {
+    max-width: max-content;
+    min-width: 300px;
+    /* height: max-content; */
+    padding: 10px 5px;
+    font-size: 1.5rem;
+    background: #33999e;
+    /* background: #5badb1; */
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    border: 2px solid #161361;
+    outline: none;
+    margin-right: 4%;
+}
+
+input[type=file] {
+    max-width: fit-content;
+    padding: 6px 0;
+    padding-left: 5px;
+    font-size: 1.5rem;
+    background: #29bde4;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+input[type=text]:focus {
+    color: #fff;
+    background: #33999e;
+}
+
+ ::placeholder {
+    /* color: rgb(224, 218, 218); */
+    color: #000;
+    font-size: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    padding-right: 1%;
+}
+
+input[type=text].active,
+input[type=number].active {
+    border: 2px solid red;
+}
+
+.weekActive {
+    border: none;
+    background: none;
+    font-weight: bold;
+    color: #000;
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.weekActiveDetails {
+    padding: 1% 2%;
+    padding-bottom: 0;
+}
+
+.buttons {
+    display: none;
+}
+
+.cta {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.module_num {
+    text-transform: capitalize;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+
+.details {
+    display: none;
+    align-items: center;
+}
+
+#moduleDetails {
+    margin-left: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#moduleDetails .moduleinput {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+#moduleDetails label {
+    width: 180px;
+}
+
+.loading_circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    overflow-x: hidden;
+}
+
+.loading_circle img {
+    width: 50px;
+}
+
+.videoTable {
+    /* border: 2px solid black; */
+    /* width: 100%; ye tha */
+    /* new additions */
+    margin: 2% 0;
+    width: 95%;
+}
+
+.videoTable .lecture_item {
+    padding: 2%;
+    margin-bottom: 2%;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ecf0f3;
+    /* box-shadow: 5px 10px 10px 10px #cbced1 inset; */
+}
+
+.videoTable .lecture_item:nth-child(odd) {
+    /* background-color: #cbced1; */
+    /* background-color: #ecf0f3; */
+}
+
+.videoTable .lecture_item .lecture {
+    display: flex;
+    align-items: center;
+}
+
+.videoTable .lecture_item .lecture .lecture_details {
+    flex: 1;
+    /* border: 1px solid black; */
+}
+
+.videoTable .lecture_item .lecture .videofilepluserror {
+    flex: 2;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.videofilepluserror .lecture_video_file label {
+    background-color: #33999e;
+    padding: 3% 5%;
+    cursor: pointer;
+    /* border-radius: 20px; */
+}
+
+.file_upload_success {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+
+.endd1 {
+    position: relative;
+    flex: 1;
+}
+
+.endd1:after {
+    content: '';
+    width: 95%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.endd2 {
+    position: relative;
+    flex: 8;
+    /* margin-left: 10%; */
+}
+
+.endd2:after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 14%;
+    top: 10px;
+}
+
+@media (max-width: 1100px) {
+    .videoTable .lecture_item .lecture .lecture_details {
+        flex: 2;
+    }
+    .videoTable .lecture_item .lecture .videofilepluserror {
+        flex-direction: column;
+    }
+    .progressdiv {
+        margin: 4% 0;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1070px) {
+    .videofilepluserror .lecture_video_file form input[type=file] {
+        width: 200px;
+    }
+}
+@media (max-width: 1000px) {
+    .videoTable .lecture_item .lecture {
+        flex-direction: column;
+    }
+    .videoTable .lecture_item .lecture .lecture_details {
+        width: 100%;
+        justify-content: center;
+    }
+    .videoTable .lecture_item .lecture .videofilepluserror {
+        width: 100%;
+        margin-top: 2%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .videofilepluserror .file_upload_success {
+        justify-content: center;
+        color: rgb(149, 223, 236);
+    }
+    .progressdiv {
+        margin: 0;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .videoTable .lecture_item {
+        margin-bottom: 5%;
+    }
+    .videoTable .lecture_item .lecture .videofilepluserror {
+        width: 100%;
+        margin-top: 2%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .progressdiv {
+        margin: 4% 0;
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .videoTable {
+        margin-top: 4%;
+    }
+    .videofilepluserror .lecture_video_file form {
+        flex-direction: column;
+    }
+    .videofilepluserror .lecture_video_file form input[type='file'] {
+        margin: 5% 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .videofilepluserror .lecture_video_file form .plus {
+        margin-top: 7%;
+    }
+    .videoTable .lecture_item {
+        margin-bottom: 9%;
+    }
+}
+
+@media (max-width: 410px) {
+    .videofilepluserror .lecture_video_file form input[type='file'] {
+        width: 200px;
+    }
+    .videoTable .lecture_item {
+        margin-bottom: 12%;
+    }
+}
+
+.type {
+    padding: 10% 3%;
+    text-align: center;
+    box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px #cbced1;
+    cursor: pointer;
+    border-right: 2px solid #161361;
+}
+
+.type:hover {
+    background-color: #161361;
+    box-shadow: 0 0 0 #fff;
+    color: #fff;
+}
+
+.typeactive {
+    background-color: #161361;
+    box-shadow: 0 0 0 #fff;
+    color: #fff;
+}
+
+.COdetails {
+    background-color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 95%;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.typeofCO {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.COdata {
+    flex: 5;
+    height: 100%;
+    /* border: 2px solid black; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    padding: 0 2%;
+}
+
+.COBasicDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    /* background-color: burlywood; */
+}
+
+.COBasicDetails input {
+    margin-right: 2%;
+}
+
+.COBasicDetails input[type=number] {
+    min-width: 50px;
+    margin-right: 0;
+}
+
+@media (max-width: 650px) {
+    .COBasicDetails {
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        padding: 0 3%;
+    }
+    .COBasicDetails input[type=number] {
+        margin-top: 2%;
+    }
+    .COBasicDetails input[type=text] {
+        min-width: 100%;
+    }
+    .resource {
+        padding: 0 3%;
+    }
+}
+
+.COdata form {
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.COtitle {
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.resource {
+    display: none;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.resourcefile {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.fileinfo {
+    /* display: flex; */
+    /* border: 2px solid black; */
+    width: 100%;
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 0 5%; */
+}
+
+@media (max-width: 855px) {
+    .COdata {
+        padding: 0 1%;
+    }
+}
+
+@media (max-width: 800px) {
+    .COdetails {
+        flex-direction: column;
+        margin: 6% 0;
+    }
+    .typeofCO {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .type {
+        padding: 2% 0;
+        flex: 1;
+        border-right: 0px solid #161361;
+        border-bottom: 2px solid #161361;
+    }
+    .COdata {
+        margin: 2% 0;
+        padding: 0;
+        width: 100%;
+        padding: 0 1%;
+    }
+    .COdata form .COtitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .COdata form .resource {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 700px) {
+    .COdata form input[type='file'] {
+        width: 200px;
+    }
+}
+
+@media (max-width: 618px) {
+    .COtitle {
+        flex-direction: column;
+    }
+    .resource {
+        /* display: flex; */
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .COtitle input[type='text'] {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    .COtitle input[type='text'] {
+        min-width: 210px;
+    }
+}
+
+.quizDetails {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assnDetails {
+    /* display: block; */
+    width: 95%;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background-color: white;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.assnDetails form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlediv input[type=number] {
+    margin-top: 2%;
+}
+
+@media (max-width: 1160px) {
+    .assnDetails form .titlediv {
+        flex: 1.5;
+        /* border: 2px solid black; */
+    }
+    .assnDetails form .filediv {
+        flex: 2;
+        /* border: 2px solid black; */
+    }
+}
+
+@media (max-width: 950px) {
+    .assnDetails form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .assnDetails form .titlediv {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        /* border: 2px solid black; */
+    }
+    .assnDetails form .titlediv label {
+        flex: 1;
+        text-align: left;
+    }
+    .assnDetails form .titlediv .input {
+        flex: 1;
+    }
+    .assnDetails form .filediv {
+        display: flex;
+        justify-content: left;
+        margin-top: 5%;
+        align-items: center;
+    }
+    .assnDetails form .filediv .filedivtext {
+        flex: 1;
+        text-align: left;
+    }
+    .assnDetails form .filediv .filedivfile {
+        flex: 1;
+    }
+    .assnDetails form .filediv .filedivfile input[type='file'] {
+        width: 210px;
+    }
+    .titlediv input[type=number] {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:890px) {
+    .titlediv input[type=number] {
+        min-width: 50px;
+    }
+    .titlediv input {
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .assnDetails form .filediv {
+        flex-direction: column;
+    }
+    .assnDetails form .filediv .filedivtext {
+        text-align: center;
+    }
+}
+
+@media (max-width: 680px) {
+    .assnDetails form .titlediv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .titlediv input[type=text] {
+        min-width: 97%;
+        width: 97%;
+        max-width: 97%;
+    }
+    .titlediv input[type=number] {
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 430px) {
+    .assnDetails form .titlediv input[type='text'] {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 360px) {
+    .assnDetails form .titlediv input[type='text'] {
+        min-width: 200px;
+    }
+}

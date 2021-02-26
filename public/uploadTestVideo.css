@@ -1,0 +1,227 @@
+.utv_container {
+    /* padding: 3%; */
+    margin-top: 30px;
+    color: #161361;
+}
+
+.points_container {
+    margin-top: 2%;
+    padding-left: 2%;
+    font-weight: lighter;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.points_container i {
+    flex: 0.5;
+    /* width: 10%; */
+    font-size: 2rem;
+    padding-right: 2%;
+    overflow: hidden;
+}
+
+.points_container h4 {
+    flex: 10;
+}
+
+.fa-times-circle {
+    color: maroon;
+}
+
+.fa-check-circle {
+    color: green;
+}
+
+#test_error_message {
+    margin-top: 3%;
+    margin-bottom: 0;
+    text-align: center;
+    color: red;
+}
+
+.file_upload {
+    margin-top: 2%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-zone {
+    width: 400px;
+    height: 200px;
+    margin: 2% 3%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* color: #cccccc; */
+    border: 4px dashed #33999e;
+    border-radius: 10px;
+}
+
+.drop-zone--over {
+    border-style: solid;
+}
+
+.drop-zone__prompt i {
+    font-size: 8rem;
+    color: #33999e;
+}
+
+.drop-zone__input {
+    display: none;
+}
+
+.drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url('/be-an-educator/upload-test-video.svg');
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+}
+
+.drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+}
+
+.test_video_success_upload {
+    display: none;
+    font-size: 1.8rem;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.test_video_success_upload i {
+    font-size: 2.5rem;
+    padding-right: 3%;
+}
+
+.loading_circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading_circle img {
+    width: 70px;
+}
+.fa-chevron-circle-left{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.scrollTop{
+    position: relative;
+    width: 90px;
+    height: 40px;
+    background: #161361;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.scrollTop:hover{
+    background: #29bde4;
+    color: white;
+}
+
+#feedbackpanel{
+    background-color: transparent; 
+    color: blue; 
+    text-decoration: underline;
+    border: none; 
+    outline: none; 
+    font-size: 1.8rem; 
+    cursor: pointer;
+}
+.cta {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .points_container {
+        margin-top: 4%;
+    }
+    .points_container i {
+        padding-right: 3%;
+    }
+    .file_upload {
+        flex-direction: column;
+        /* border: 1px solid black; */
+    }
+    .drop-zone {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 0;
+    }
+    .test_video_success_upload {
+        margin-top: 5%;
+        font-size: 1.5rem;
+    }
+    .test_video_success_upload i {
+        font-size: 2.5rem;
+    }
+    .loading_circle {
+        margin-top: 2%;
+    }
+    .loading_circle img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 850px) {
+    .backBtn {
+        padding: 1% 4%;
+    }
+}
+
+@media (max-width: 600px) {
+    .backBtn {
+        padding: 3% 5%;
+    }
+}
+
+@media (max-width: 350px) {
+    .utv_container {
+        padding: 0
+    }
+    .points_container {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,475 @@
+input[type='text']:disabled {
+    cursor: not-allowed;
+}
+
+.details {
+    display: flex;
+}
+
+.module_main {
+    margin: 2% 0;
+    margin-left: 3%;
+    margin-bottom: 4%;
+    /* background-color: burlywood; */
+    border-bottom: 2px solid black;
+}
+
+.newmodule {
+    padding-top: 2%;
+    padding-bottom: 0;
+    /* justify-content: center; */
+}
+
+.module_leftmargin {
+    margin-left: 4%;
+}
+
+.moddetails {
+    display: none;
+    margin-bottom: 2%;
+}
+
+.moduleinput1 {
+    display: flex;
+    align-items: center;
+    padding: 1% 0;
+}
+
+.moduleinput1 label {
+    flex: 0.3;
+}
+
+.moddetails .plus {
+    margin-top: 2%;
+}
+
+.mod_text {
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.mod_text h3 {
+    background-color: #161361;
+    color: white;
+    padding: 1%;
+}
+
+.mod_text i {
+    padding-left: 2%;
+    font-size: 26px;
+}
+
+.mod_title {
+    text-transform: capitalize;
+}
+
+.additions {
+    justify-content: center;
+    /* margin: 2% 0; */
+    flex-wrap: wrap;
+}
+
+.additions .plus {
+    margin: 0;
+}
+
+.viewLec {
+    margin: 2% 0;
+}
+
+@media(max-width: 1000px) {
+    .moduleinput1 label {
+        flex: 0.5;
+    }
+}
+
+@media(max-width: 800px) {
+    .moduleinput1 label {
+        flex: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .viewLec {
+        margin-bottom: 4%;
+    }
+}
+
+@media(max-width: 650px) {
+    .moduleinput1 {
+        flex-direction: column;
+        align-items: flex-start
+    }
+    .additions {
+        margin-top: 5%;
+    }
+}
+
+@media(max-width: 550px) {
+    .module_main {
+        margin-top: 4%;
+    }
+    .newmodule {
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type=text] {
+        margin: 0;
+    }
+    .newmodule .cta {
+        width: max-content;
+        margin-top: 1%;
+    }
+}
+
+@media (max-width: 450px) {
+    .module_main {
+        margin-top: 6%;
+    }
+    .additions {
+        margin-top: 9%;
+    }
+
+}
+@media (max-width: 380px) {
+    .module_main {
+        margin-top: 10%;
+    }
+    input[type=text] {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 330px) {
+    input[type=text] {
+        min-width: 200px;
+    }
+    .moddetails .plus {
+        margin-top: 4%;
+    }
+}
+
+.weekmaindiv {
+    border-left: 2px solid black;
+    /* background-color: lightcoral; */
+}
+
+.weekBtn {
+    margin: 2% 0;
+    margin-left: 3%;
+    background-color: rgb(200, 0, 0);
+    box-shadow: inset 0 0 0 #33999e, inset -0 -0 0px #33999e;
+    font-weight: 900;
+    font-size: larger;
+    position: relative;
+    color: #fff;
+    z-index: 5;
+    transform: scale(1);
+}
+
+.weekBtn:hover {
+    transform: scale(1.1);
+    border: 1px solid #000;
+}
+
+.weekActive {
+    margin: 0;
+    padding-left: 3%;
+}
+
+.weekActive h3 {
+    text-transform: capitalize;
+}
+
+.week {
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.week:after {
+    content: '';
+    width: 3%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.week i {
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+.weekDetails {
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+}
+
+.weekdetailsinputs {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.weektitlediv {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.weektimediv {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+@media (max-width: 1100px) {
+    .weekDetails {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .weekdetailsinputs {
+        width: 100%;
+    }
+    .addModbtn {
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 970px) {
+    .weekdetailsinputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .weektitlediv {
+        width: 100%;
+    }
+    .weektitlediv label {
+        flex: 0.4;
+    }
+    .weektimediv {
+        margin-top: 2%;
+        width: 100%;
+    }
+    .weektimediv label {
+        flex: 0.4;
+    }
+}
+
+@media (max-width: 860px) {
+    .weektitlediv label {
+        flex: 0.6;
+    }
+    .weektimediv label {
+        flex: 0.6;
+    }
+}
+
+@media (max-width: 730px) {
+    .weektitlediv label {
+        flex: 0.8;
+    }
+    .weektimediv label {
+        flex: 0.8;
+    }
+}
+
+@media (max-width: 660px) {
+    .weektitlediv label {
+        flex: 1;
+    }
+    .weektimediv label {
+        flex: 1;
+    }
+}
+
+@media (max-width: 570px) {
+    .weektitlediv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .weektimediv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 380px) {
+    .weekdetailsinputs input[type='text'] {
+        min-width: 100%;
+    }
+}
+
+.collapseWeek {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 2% 0;
+}
+
+.collapseWeek:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.collapseWeek .plus {
+    z-index: 5;
+    margin: 0;
+}
+
+.viewallassn {
+    display: none;
+    width: 95%;
+    margin-bottom: 5%;
+}
+
+.viewallassnitem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1%;
+    background-color: #ecf0f3;
+    border: 2px solid #161361;
+}
+
+.viewassndel {
+    padding: 0 1%;
+}
+
+.viewassndel i {
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(200, 0, 0);
+}
+
+.viewassntype {
+    background-color: #29bde4;
+    flex: 2;
+    padding: 3% 0;
+}
+
+.viewassndetails {
+    flex: 3;
+    padding: 1%;
+    border-right: 2px solid #161361;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.viewassntitle {
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewassnfilename {
+    background: #33999e;
+    color: white;
+    width: max-content;
+    border-radius: 10px;
+    padding: 2% 3%;
+}
+
+
+.prevweekmssg {
+    margin-top: 5%;
+}
+
+
+@media (max-width:850px) {
+    .viewallassn {
+        margin-top: 4%;
+        margin-bottom: 7%;
+    }
+    .viewallassnitem {
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+    .viewassntype, .viewassndetails {
+        width: 100%;
+    }
+    .viewassndetails {
+        border-right: 0;
+        border-bottom: 2px solid #161361;
+    }
+    .viewassndel {
+        padding: 2% 1%;
+    }    
+
+}
+
+@media (max-width: 700px) {
+    .wacta {
+        margin: 5% 0;
+    }
+    .weekadditionals {
+        margin-bottom: 5%;
+    }
+    .prevweekmssg {
+        margin-top: 7%;
+    }
+
+}
+@media (max-width: 500px) {
+    .wacta {
+        margin: 7% 0;
+    }
+    .weekadditionals {
+        margin-bottom: 7%;
+    }
+    .prevweekmssg {
+        margin-top: 9%;
+    }
+
+}
+@media (max-width:400px) {
+    .viewallassn {
+        margin-top: 6%;
+        margin-bottom: 9%;
+    }
+    .viewallassnitem {
+        margin-bottom: 5%;
+    }
+    .prevweekmssg {
+        margin-top: 11%;
+    }
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: green;
+    transition: width .6s ease;
+    font-size: 16px;
+    text-align: center;
+}
